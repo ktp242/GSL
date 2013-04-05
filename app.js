@@ -17,6 +17,7 @@ The very beginning. Build my own site "GSL."
 var express = require('express')
 var http = require('http')
 var path = require('path')
+var mongoose = require('mongoose');
 
 
 // the ExpressJS App
@@ -55,19 +56,9 @@ app.configure('development', function(){
   app.use(express.errorHandler());
 });
 
-app.get('/', routes.index);
-app.get('/buzz', routes.buzz);
-app.get('/speakers', speaker.new);
-app.get('/speakers/new', speaker.new);
-
-http.createServer(app).listen(app.get('port'), function(){
-  console.log("Express server listening on port " + app.get('port'));
-});
-
 
 // ROUTES
 var routes = require('./routes/index.js');
-
 app.get('/', routes.index);
 
 

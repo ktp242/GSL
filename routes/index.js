@@ -24,4 +24,4 @@ exports.index = function(req, res){
   console.log("main page requested");
   res.render('index', { title: 'Graveyard Social' });
 
-};
+}
