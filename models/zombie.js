@@ -20,18 +20,7 @@ var Schema = mongoose.Schema;
 // define zombie schema
 var ZombieSchema = new Schema({
     slug : { type: String, lowercase: true, required: true, unique: true },
-	title : { type: String, required: true, },
-	releasedate : Date,
-	story : [String],
-	photo : String,
-	director : {
-		name : String,
-		url : String
-	},
-	specialties : [String],
-	infective : Boolean,
-	treatable : Boolean,
-    lastupdated : { type: Date, default: Date.now },
+	contents : { type: String, required: true }
 });
 
 

@@ -60,6 +60,10 @@ app.configure('development', function(){
 // ROUTES
 var routes = require('./routes/index.js');
 app.get('/', routes.index);
+app.post('/createDialogue',routes.createDialogue); //form POST submits here
+app.get('/dialogue_log', routes.dialogue_log); // get remote data from DB
+app.get('/data/zombie', routes.data_all); // get all data from DB as JSON
+app.get('/data/zombie/:dialogue_id', routes.data_detail); // get detailed data from JSON
 
 
 // create NodeJS HTTP server using 'app'

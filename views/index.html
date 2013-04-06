@@ -1,7 +1,7 @@
 <div class="row">
 
 	<div class="span6">
-
+		
 		<h1>Graveyard Social</h1>
 		
 		<img src="http://img.gawkerassets.com/img/17zazvflrqecwjpg/ku-xlarge.jpg" alt="poster of FIDO">
@@ -11,7 +11,20 @@
 		<h3>{{pageTitle}}</h3>
 
 		<p>
-			<input x-webkit-speech lang = "en-US">
+			<form method="POST" action="/createDialogue">
+			 
+			 <label for="contents">
+			   <h3>Let's make some noise!</h3> 
+			   <input x-webkit-speech lang = "en-US" type="text" name="contents" id="contents">
+			 </label>
+			 
+			 <input type="submit" value="confirm">
+			
+			</form>
+
+            <a href="/dialogue_log" class="btn btn-info"> Read what your folks've said</a>
+
+			</form>
 		</p>
 
 
