@@ -10,6 +10,9 @@ working diary
 *20130404
 The very beginning. Build my own site "GSL."
 
+*20130408
+Build CSS.
+
  */
 
 
@@ -38,7 +41,6 @@ app.configure(function(){
   app.set('view engine', 'html');
   app.set('layout','layout');
   app.engine('html', require('hogan-express')); // https://github.com/vol4ok/hogan-express
-
 
   app.use(express.logger('dev'));
   app.use(express.bodyParser());
