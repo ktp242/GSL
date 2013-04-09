@@ -116,7 +116,7 @@ button,
 input,
 select,
 textarea {
-  margin: 0;
+  margin-left: 0;
   font-size: 100%;
   vertical-align: middle;
 }
@@ -226,7 +226,7 @@ body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 14px;
   line-height: 20px;
-  color: #333333;
+  color: #444444;
   background-color: #ffffff;
 }
 
@@ -1106,7 +1106,7 @@ input[type="color"],
 input,
 textarea,
 .uneditable-input {
-  width: 206px;
+  width: 420px;
 }
 
 textarea {
