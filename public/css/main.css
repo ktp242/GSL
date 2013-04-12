@@ -50,6 +50,17 @@ border-top: 1.5px solid #4f85a0;
 border-bottom: 1px solid #000000;
 }
 
+/* link */
+
+a {
+  color: #6fa7c2;
+}
+
+a:hover {
+  color: #6fa7c2;
+  text-decoration: underline;
+}
+
 /* button */
 
 .btn-custom {
