@@ -41,7 +41,8 @@ app.configure(function(){
   app.set('view engine', 'html');
   app.set('layout','layout');
   app.engine('html', require('hogan-express')); // https://github.com/vol4ok/hogan-express
-
+  
+  app.use(express.favicon());
   app.use(express.logger('dev'));
   app.use(express.bodyParser());
   app.use(express.methodOverride());
