@@ -12,6 +12,9 @@
    *20130411
    change the background image and color of the text under body{}
    change the color of button and <hr>
+
+   *20130509
+   make the attribute of id = #Response
    ========================================================================== */
 
 /* body */
@@ -85,7 +88,7 @@ a:hover {
   -webkit-font-smoothing: antialiased;
 }
 
-/* div */
+/* #Response */
 #Response {
   font-size: 15px;
   height: 25px;

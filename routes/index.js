@@ -32,8 +32,6 @@ Don't know why. Perhpas because the "templateData"
 here would fight with the" templateData" in 
 "dialogue_log." 
 
-*20130509
-Import the raw JSON to the index.html 
 
  */
 
@@ -91,8 +89,8 @@ exports.createDialogue = function(req, res) {
 		} else {
 			console.log("Created a new dialogue!");
 			console.log(newDialogue);
-			// redirect to /dialogue_log.html
-			//res.redirect('/')
+			//redirect to /dialogue_log.html
+			res.redirect('/dialogue_log')
 		}
 	});
 };
