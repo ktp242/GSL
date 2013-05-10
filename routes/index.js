@@ -32,6 +32,9 @@ Don't know why. Perhpas because the "templateData"
 here would fight with the" templateData" in 
 "dialogue_log." 
 
+*20130509
+Import the raw JSON to the index.html 
+
  */
 
 
@@ -50,6 +53,7 @@ exports.index = function(req, res){
   res.render('index', { title: 'Graveyard Social' });
 
 }
+
 
 
 /*
@@ -88,7 +92,7 @@ exports.createDialogue = function(req, res) {
 			console.log("Created a new dialogue!");
 			console.log(newDialogue);
 			// redirect to /dialogue_log.html
-			res.redirect('dialogue_log')
+			//res.redirect('/')
 		}
 	});
 };
@@ -105,7 +109,7 @@ exports.dialogue_log = function(req, res) {
     console.log("It is now executing dialogue_log.");
 
     var dialogue_log = 'http://gsl.herokuapp.com/data/zombie';
-    //var dialogue_log = 'http://localhost:5000/data/zombie';
+    // var dialogue_log = 'http://localhost:5000/data/zombie';
 
     // make a request to dialogue_log
     request.get(dialogue_log, function(error, response, data){
@@ -128,7 +132,7 @@ exports.dialogue_log = function(req, res) {
             var templateData = {
                 dialogues : apiData.dialogue,
                 rawJSON : data, 
-                remote_url : dialogue_log
+                remote_url : dialogue_log,
             }
 
             return res.render('dialogue_log', templateData);
@@ -200,3 +204,9 @@ exports.data_detail = function(req, res) {
 	}); // end of .findOne query
 
 }
+
+
+/*
+	GET the data from a random word-generating function
+*/
+

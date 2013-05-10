@@ -38,7 +38,12 @@ body {
 
 h1 {
 	font-size: 45px;
-	margin-bottom: 40px;
+}
+
+h4 {
+  font-size: 20px;
+  color: #4f85a0;
+  margin-bottom: 40px;
 }
 
 /* symbol */
@@ -79,6 +84,11 @@ a:hover {
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.49);
   -webkit-font-smoothing: antialiased;
 }
+
+/* div */
+#Response {
+  font-size: 15px;
+  height: 25px;
 }
 
 

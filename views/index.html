@@ -1,8 +1,30 @@
+<script>
+
+function pickWord(){
+
+var array = 
+["Vegetarians are healthy", "Headache... need meat with Aspirin", "Any diet brain?", "Hungry... must got a hole on my stomache", "Mowers...Run....", "Can I get a date here?",
+"Don't push me! I am trying to be faster!", "I stink...they didn't put enough cologne on my body", "Stiff again!", "I wish I am a man magnet here"];
+var r = usefloor(0,8);
+var word = array[r];
+
+return word;
+
+}
+
+function usefloor(min,max) {
+return Math.floor(Math.random()*(max-min+1)+min);
+}
+
+</script>
+
 <div class="row">
 
 	<div class="span6">
 		
 		<h1>Graveyard Social</h1>
+
+		<h4>of the zombies, for the zombies, by a human being</h4>
 		
 		<img src="http://img.gawkerassets.com/img/17zazvflrqecwjpg/ku-xlarge.jpg" alt="poster of FIDO">
 		
@@ -16,19 +38,24 @@
 			 <h3>Let's make some noise!</h3>
 
 			 <label for="contents">
-			    <input x-webkit-speech lang = "en-US" type="text" name="contents" id="contents">
-			    <input type="submit" value="confirm">		 
+			    <input x-webkit-speech lang = "en-US" type="text" name="contents" id="contents"/>
+			    <input type="submit" value="confirm" onclick="javascript:$('#Response').text(pickWord());return false;"/>		 
              </label>
 			 
-			
-			
 			</form>
 
-            <a href="/dialogue_log" class="btn btn-custom"> Read what your folks've said</a>
-
-			</form>
 		</p>
 
 		<hr>
+
+		<h3>Read what you've just said in Zombish!</h3>
+        
+        <div width="550" frameborder="0"> 
+        	<pre id="Response" height="80"></pre>
+        </div>
+        
+        </div>
+
+        
 		
 	</div>
